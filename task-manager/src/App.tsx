@@ -9,12 +9,13 @@ const initialValues = {
 }
 const App = () =>{
  
-  useFormik({
+ const formik = useFormik({
      initialValues,
      onSubmit: (values) => {
        console.log('Form data', values);
      },
   })
+  console.log(formik)
  
   return (
     <div>
