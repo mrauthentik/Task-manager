@@ -25,6 +25,7 @@ const App = () =>{
           <Field type="text" name="name" />
           {errors.name && touched.name && <p className='error'>{errors.name}</p>}
 
+
           <label htmlFor="email">Email</label>
           <Field type="email" name="email" />
           {errors.email && touched.email && <p className='error'>{errors.email} </p>}
@@ -34,7 +35,7 @@ const App = () =>{
           {errors.password && touched.password && <p className='error'>{errors.password} </p>}
 
           <label htmlFor="cpassword">Confirm Password</label>
-          <Field type="password " name="password" />
+          <Field type="password " name="cpassword" />
           {errors.cpassword && touched.cpassword && <p className='error'>{errors.cpassword} </p>}
 
           <button type='submit'> Submit</button>
