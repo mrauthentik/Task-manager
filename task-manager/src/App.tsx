@@ -1,10 +1,23 @@
-
+import { useFormik } from 'formik'
 import './App.css'
 
-function App() {
+const initialValues = {
+  name: '',
+  email: '',
+  password: '',
+  cpassword: ''
+}
+const App = () =>{
+ 
+  useFormik({
+     initialValues,
+     onSubmit: (values) => {
+       console.log('Form data', values);
+     },
+  })
  
   return (
-    <>
+    <div>
      <form className="signup_form">
       <label htmlFor="name">Name</label>
       <input type="text" name='name' />
@@ -19,7 +32,7 @@ function App() {
       <input type="password" name='cpassword' />
       
      </form>
-    </>
+    </div>
   )
 }
 
